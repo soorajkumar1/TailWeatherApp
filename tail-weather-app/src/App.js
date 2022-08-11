@@ -5,6 +5,7 @@ import { useState } from 'react';
 import DetailCard from './Components/DetailCard';
 import Header from './Components/Header';
 import SummaryCard from './Components/SummaryCard';
+import Footer from './Components/Footer';
 
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY
@@ -101,7 +102,7 @@ function App() {
         {/* info card section */}
         <div className='w-2/4 p-5'>
           <Header />
-          <div className='flex flex-col my-10'>
+          <div className='flex flex-col my-10 '>
             {weatherData.length === 0 ?
               <div className='container p-4 flex items-center justify center h-1/3 mb-auto'>
                 <h1 className='text-gray-300 text-4xl font-bold uppercase'>{noData}</h1>
@@ -120,6 +121,10 @@ function App() {
                 </ul>
               </>
             }
+            {/* <div className='bg-red-800 mb-11'>
+
+              <Footer />
+            </div> */}
           </div>
         </div>
       </div>
